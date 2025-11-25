@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     function renderCart() {
-        const container = document.getElementById("cartContent");
+        const container = document.querySelector("#cartContent");
         if (!container) return;
     
         // if cart is empty
@@ -416,13 +416,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		refreshFiltersAndProducts();
 
 		// scroll to top of browse view
-		document.getElementById("productGrid")?.scrollIntoView({ behavior: "smooth" });
+		document.querySelector("#productGrid")?.scrollIntoView({ behavior: "smooth" });
 	});
 	
     // ----- SIDEBAR FILTER -----
 
     function populateColorFilters(productData) {
-        const container = document.getElementById("filterColors");
+        const container = document.querySelector("#filterColors");
         if (!container) return;
 
         const colorMap = new Map();
@@ -459,7 +459,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function populateSizeFilters(productData) {
-        const container = document.getElementById("filterSizes");
+        const container = document.querySelector("#filterSizes");
         if (!container) return;
 
         const sizeSet = new Set();
@@ -517,7 +517,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function populateCategoryFilters(productData) {
-        const container = document.getElementById("filterCategories");
+        const container = document.querySelector("#filterCategories");
         if (!container) return;
 
         const categorySet = new Set();
@@ -549,7 +549,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function populateGenderFilters(productData) {
-        const container = document.getElementById("filterGender");
+        const container = document.querySelector("#filterGender");
         if (!container) return;
 
         const genderSet = new Set();
@@ -582,7 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ----- PRODUCT GRID RENDER -----
     function renderProductGrid(products) {
-        const grid = document.getElementById("productGrid");
+        const grid = document.querySelector("#productGrid");
         if (!grid) return;
     
         grid.innerHTML = "";
@@ -711,7 +711,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ----- CURRENT FILTER CHIPS -----
     function updateCurrentFilterChips() {
-        const container = document.getElementById("currentFilters");
+        const container = document.querySelector("#currentFilters");
         if (!container) return;
 
         container.innerHTML = "";
@@ -759,7 +759,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ----- CLEAR ALL BUTTON -----
-    const clearAllBtn = document.getElementById("clearAllFilters");
+    const clearAllBtn = document.querySelector("#clearAllFilters");
     if (clearAllBtn) {
         clearAllBtn.addEventListener("click", () => {
             document.querySelectorAll(".filter-checkbox").forEach(cb => {
@@ -783,25 +783,25 @@ document.addEventListener("DOMContentLoaded", () => {
         showView("product");
     
         // main product text
-        document.getElementById("singleProductTitle").textContent = product.name;
-        document.getElementById("singleProductPrice").textContent = `$${product.price}`;
-        document.getElementById("singleProductDescription").textContent = product.description;
-        document.getElementById("singleProductMaterial").textContent = product.material;
+        document.querySelector("#singleProductTitle").textContent = product.name;
+        document.querySelector("#singleProductPrice").textContent = `$${product.price}`;
+        document.querySelector("#singleProductDescription").textContent = product.description;
+        document.querySelector("#singleProductMaterial").textContent = product.material;
     
         // breadcrumbs
         const genderLabel = product.gender === "womens" ? "Women" : "Men";
-        document.getElementById("crumbGender").textContent = genderLabel;
-        document.getElementById("crumbCategory").textContent = product.category;
-        document.getElementById("crumbTitle").textContent = product.name;
+        document.querySelector("#crumbGender").textContent = genderLabel;
+        document.querySelector("#crumbCategory").textContent = product.category;
+        document.querySelector("#crumbTitle").textContent = product.name;
     
 		// quantity
-        const quantityContainer = document.getElementById("singleProductQuantity");
+        const quantityContainer = document.querySelector("#singleProductQuantity");
         quantityContainer.addEventListener("input", () => {
             selectedQuantity = parseInt(quantityContainer.value);
         });
 	
         // sizes
-        const sizeContainer = document.getElementById("singleProductSizes");
+        const sizeContainer = document.querySelector("#singleProductSizes");
         sizeContainer.innerHTML = "";
     
         if (product.sizes && product.sizes.length > 0) {
@@ -824,7 +824,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         // colors 
-        const colorContainer = document.getElementById("singleProductColors");
+        const colorContainer = document.querySelector("#singleProductColors");
         colorContainer.innerHTML = "";
     
         if (product.color && product.color.length > 0) {
@@ -848,7 +848,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // add product to cart
-        const addBtn = document.getElementById("btnAddProductToCart");
+        const addBtn = document.querySelector("#btnAddProductToCart");
         addBtn.onclick = () => {
             addToCart(currentProduct, {
                 quantity: selectedQuantity,
@@ -859,7 +859,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
             
         // related products 
-        const relatedContainer = document.getElementById("relatedProducts");
+        const relatedContainer = document.querySelector("#relatedProducts");
         if (relatedContainer) {
             relatedContainer.innerHTML = "";
     
