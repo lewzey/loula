@@ -1,27 +1,38 @@
-// ---------- SPA Navigation ----------
+// ----- SPA Navigation -----
 document.addEventListener("DOMContentLoaded", () => {
-    const productData = [{"id": "P001", "name": "Silk Wrap Blouse", "gender": "womens", "category": "Tops", "description": "Elegant wrap blouse crafted from luxurious silk with adjustable tie waist and feminine draping. Perfect for office or evening occasions.", "price": 89.99, "cost": 35, "color": [{"name": "Ivory", "hex": "#FFFFF0"}], "sizes": ["XS", "S", "M", "L"], "material": "100% Silk", "sales": {"domestic": 142, "international": 38, "total": 180}}, {"id": "P002", "name": "High-Waist Linen Trousers", "gender": "mens", "category": "Bottoms", "description": "Breathable high-waisted trousers in premium linen blend with tailored fit and wide leg silhouette. Features side pockets and zip closure.", "price": 115, "cost": 50, "color": [{"name": "Beige", "hex": "#F5F5DC"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Linen Blend", "sales": {"domestic": 98, "international": 52, "total": 150}}, {"id": "P003", "name": "Cashmere Turtleneck Sweater", "gender": "mens", "category": "Sweaters", "description": "Ultra-soft pure cashmere turtleneck with ribbed trim and relaxed fit. A timeless wardrobe essential for layering or wearing solo.", "price": 195, "cost": 100, "color": [{"name": "Charcoal", "hex": "#36454F"}], "sizes": ["S", "M", "L"], "material": "100% Cashmere", "sales": {"domestic": 215, "international": 87, "total": 302}}, {"id": "P004", "name": "Pleated Midi Skirt", "gender": "womens", "category": "Bottoms", "description": "Sophisticated midi-length skirt with elegant knife pleats and elasticated waistband. Moves beautifully with every step.", "price": 78.5, "cost": 35, "color": [{"name": "Navy", "hex": "#000080"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Polyester Crepe", "sales": {"domestic": 167, "international": 43, "total": 210}}, {"id": "P005", "name": "Leather Moto Jacket", "gender": "mens", "category": "Outerwear", "description": "Classic motorcycle jacket in supple genuine leather with asymmetric zip, belted waist, and multiple pockets. Edgy and timeless.", "price": 425, "cost": 350, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L"], "material": "Genuine Leather", "sales": {"domestic": 78, "international": 34, "total": 112}}, {"id": "P006", "name": "Floral Print Maxi Dress", "gender": "womens", "category": "Dresses", "description": "Flowing maxi dress featuring romantic floral print, tiered hem, and adjustable shoulder ties. Ideal for garden parties and summer events.", "price": 145, "cost": 100, "color": [{"name": "Multicolor", "hex": "#FFB6C1"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Voile", "sales": {"domestic": 203, "international": 67, "total": 270}}, {"id": "P007", "name": "Ribbed Tank Top", "gender": "mens", "category": "Tops", "description": "Essential ribbed tank in soft cotton with slim fit and scooped neckline. Perfect basic for layering or wearing alone.", "price": 32, "cost": 12, "color": [{"name": "White", "hex": "#FFFFFF"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Rib", "sales": {"domestic": 456, "international": 124, "total": 580}}, {"id": "P008", "name": "Wool Blend Trench Coat", "gender": "mens", "category": "Outerwear", "description": "Double-breasted trench coat in luxe wool blend with classic belted waist, storm flap, and satin lining. A forever piece.", "price": 385, "cost": 200, "color": [{"name": "Camel", "hex": "#C19A6B"}], "sizes": ["S", "M", "L", "XL"], "material": "Wool Blend", "sales": {"domestic": 134, "international": 56, "total": 190}}, {"id": "P009", "name": "Denim Boyfriend Jeans", "gender": "womens", "category": "Bottoms", "description": "Relaxed boyfriend fit jeans in soft light wash denim with rolled cuffs and distressed details. Effortlessly cool.", "price": 98, "cost": 35, "color": [{"name": "Light Wash", "hex": "#9DB4C0"}], "sizes": ["24", "26", "28", "30", "32"], "material": "Cotton Denim", "sales": {"domestic": 287, "international": 93, "total": 380}}, {"id": "P010", "name": "Satin Camisole", "gender": "womens", "category": "Tops", "description": "Delicate satin camisole with adjustable straps and V-neckline. Pairs beautifully with blazers or high-waisted bottoms.", "price": 65, "cost": 35, "color": [{"name": "Blush", "hex": "#FFB6C1"}], "sizes": ["XS", "S", "M", "L"], "material": "Silk Satin", "sales": {"domestic": 198, "international": 71, "total": 269}}, {"id": "P011", "name": "Striped Button-Down Shirt", "gender": "mens", "category": "Tops", "description": "Classic striped shirt in crisp cotton poplin with button-down collar and chest pocket. A preppy wardrobe staple.", "price": 72, "cost": 32, "color": [{"name": "Blue/White", "hex": "#4682B4"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Poplin", "sales": {"domestic": 223, "international": 88, "total": 311}}, {"id": "P012", "name": "Velvet Blazer", "gender": "mens", "category": "Outerwear", "description": "Luxurious velvet blazer with single-button closure and structured shoulders. Adds instant sophistication to any outfit.", "price": 215, "cost": 120, "color": [{"name": "Burgundy", "hex": "#800020"}], "sizes": ["XS", "S", "M", "L"], "material": "Cotton Velvet", "sales": {"domestic": 89, "international": 41, "total": 130}}, {"id": "P013", "name": "Wide-Leg Palazzo Pants", "gender": "womens", "category": "Bottoms", "description": "Dramatic wide-leg pants with high waist and fluid drape. Creates an elegant, elongated silhouette.", "price": 108, "cost": 40, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Viscose", "sales": {"domestic": 176, "international": 64, "total": 240}}, {"id": "P014", "name": "Knit Cardigan", "gender": "mens", "category": "Sweaters", "description": "Cozy merino wool cardigan with button-front closure and ribbed edges. Perfect for transitional weather.", "price": 125, "cost": 70, "color": [{"name": "Oatmeal", "hex": "#E9DCC9"}], "sizes": ["S", "M", "L", "XL"], "material": "Merino Wool", "sales": {"domestic": 267, "international": 102, "total": 369}}, {"id": "P015", "name": "Sequin Mini Dress", "gender": "womens", "category": "Dresses", "description": "Show-stopping mini dress covered in shimmering sequins with bodycon fit. Your go-to for special occasions.", "price": 189, "cost": 120, "color": [{"name": "Gold", "hex": "#FFD700"}], "sizes": ["XS", "S", "M", "L"], "material": "Polyester Sequin", "sales": {"domestic": 145, "international": 48, "total": 193}}, {"id": "P016", "name": "Cotton T-Shirt Dress", "gender": "womens", "category": "Dresses", "description": "Easy-wearing t-shirt dress in organic cotton with relaxed fit and side pockets. Comfortable yet chic.", "price": 58, "cost": 35, "color": [{"name": "Gray", "hex": "#808080"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Organic Cotton", "sales": {"domestic": 312, "international": 118, "total": 430}}, {"id": "P017", "name": "Cropped Denim Jacket", "gender": "mens", "category": "Outerwear", "description": "Classic cropped denim jacket with button front and chest pockets. A versatile layering piece for all seasons.", "price": 95, "cost": 45, "color": [{"name": "Medium Wash", "hex": "#5B7C99"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Denim", "sales": {"domestic": 198, "international": 76, "total": 274}}, {"id": "P018", "name": "Chiffon Blouse", "gender": "womens", "category": "Tops", "description": "Ethereal chiffon blouse with sheer sleeves and delicate button details. Feminine and romantic.", "price": 79, "cost": 35, "color": [{"name": "Lavender", "hex": "#E6E6FA"}], "sizes": ["XS", "S", "M", "L"], "material": "Polyester Chiffon", "sales": {"domestic": 154, "international": 59, "total": 213}}, {"id": "P019", "name": "Skinny Ankle Jeans", "gender": "womens", "category": "Bottoms", "description": "Figure-hugging skinny jeans in dark stretch denim with ankle-length hem. Sleek and flattering.", "price": 92, "cost": 50, "color": [{"name": "Dark Wash", "hex": "#2F4F4F"}], "sizes": ["24", "26", "28", "30", "32"], "material": "Stretch Denim", "sales": {"domestic": 378, "international": 142, "total": 520}}, {"id": "P020", "name": "Puffer Vest", "gender": "mens", "category": "Outerwear", "description": "Quilted puffer vest with stand collar and zip pockets. Lightweight warmth for layering.", "price": 135, "cost": 100, "color": [{"name": "Olive", "hex": "#808000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Nylon", "sales": {"domestic": 167, "international": 53, "total": 220}}, {"id": "P021", "name": "Wrap Midi Dress", "gender": "womens", "category": "Dresses", "description": "Flattering wrap dress in soft jersey knit with tie waist and flutter sleeves. Universally flattering design.", "price": 132, "cost": 115, "color": [{"name": "Coral", "hex": "#FF7F50"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Jersey Knit", "sales": {"domestic": 189, "international": 72, "total": 261}}, {"id": "P022", "name": "Crew Neck Pullover", "gender": "mens", "category": "Sweaters", "description": "Classic crew neck sweater in soft cotton blend with ribbed trim. A casual essential for everyday wear.", "price": 88, "cost": 35, "color": [{"name": "Navy", "hex": "#000080"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Blend", "sales": {"domestic": 245, "international": 97, "total": 342}}, {"id": "P023", "name": "Pencil Skirt", "gender": "womens", "category": "Bottoms", "description": "Polished pencil skirt in stretch ponte knit with back slit and concealed zip. Office-ready elegance.", "price": 68, "cost": 25, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Ponte Knit", "sales": {"domestic": 201, "international": 84, "total": 285}}, {"id": "P024", "name": "Oversized Flannel Shirt", "gender": "mens", "category": "Tops", "description": "Cozy oversized flannel in classic plaid with button front. Perfect for layering or wearing as a light jacket.", "price": 62, "cost": 45, "color": [{"name": "Red Plaid", "hex": "#DC143C"}], "sizes": ["S", "M", "L", "XL"], "material": "Cotton Flannel", "sales": {"domestic": 276, "international": 89, "total": 365}}, {"id": "P025", "name": "Faux Fur Coat", "gender": "womens", "category": "Outerwear", "description": "Glamorous faux fur coat with hook and eye closure. Luxuriously soft and statement-making.", "price": 295, "cost": 185, "color": [{"name": "Cream", "hex": "#FFFDD0"}], "sizes": ["S", "M", "L"], "material": "Faux Fur", "sales": {"domestic": 67, "international": 28, "total": 95}}, {"id": "P026", "name": "Lace Trim Camisole", "gender": "womens", "category": "Tops", "description": "Soft modal camisole with delicate lace trim at neckline and adjustable straps. A versatile layering essential.", "price": 48, "cost": 35, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Modal", "sales": {"domestic": 334, "international": 116, "total": 450}}, {"id": "P027", "name": "Paperbag Waist Shorts", "gender": "womens", "category": "Bottoms", "description": "Tailored shorts with gathered paperbag waist and tie belt. Stylish and comfortable for warm weather.", "price": 58, "cost": 30, "color": [{"name": "Khaki", "hex": "#C3B091"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Twill", "sales": {"domestic": 223, "international": 78, "total": 301}}, {"id": "P028", "name": "Turtleneck Bodysuit", "gender": "womens", "category": "Tops", "description": "Sleek ribbed bodysuit with turtleneck and snap closure. Creates a smooth, tucked-in look.", "price": 55, "cost": 40, "color": [{"name": "Camel", "hex": "#C19A6B"}], "sizes": ["XS", "S", "M", "L"], "material": "Ribbed Cotton", "sales": {"domestic": 187, "international": 69, "total": 256}}, {"id": "P029", "name": "A-Line Denim Skirt", "gender": "womens", "category": "Bottoms", "description": "Retro-inspired A-line skirt in medium wash denim with front button detail. Flirty and fun.", "price": 72, "cost": 30, "color": [{"name": "Medium Wash", "hex": "#5B7C99"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Denim", "sales": {"domestic": 198, "international": 82, "total": 280}}, {"id": "P030", "name": "Quilted Bomber Jacket", "gender": "mens", "category": "Outerwear", "description": "Sporty quilted bomber with zip front and ribbed cuffs. Combines comfort with urban style.", "price": 165, "cost": 75, "color": [{"name": "Forest Green", "hex": "#228B22"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Nylon", "sales": {"domestic": 143, "international": 51, "total": 194}}, {"id": "P031", "name": "Slip Dress", "gender": "womens", "category": "Dresses", "description": "Minimalist slip dress in silky charmeuse with bias cut and delicate straps. Effortlessly elegant.", "price": 112, "cost": 75, "color": [{"name": "Champagne", "hex": "#F7E7CE"}], "sizes": ["XS", "S", "M", "L"], "material": "Silk Charmeuse", "sales": {"domestic": 156, "international": 64, "total": 220}}, {"id": "P032", "name": "Cable Knit Sweater", "gender": "mens", "category": "Sweaters", "description": "Traditional cable knit sweater in wool blend with crew neck. Cozy texture and timeless appeal.", "price": 145, "cost": 155, "color": [{"name": "Ivory", "hex": "#FFFFF0"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Wool Blend", "sales": {"domestic": 212, "international": 88, "total": 300}}, {"id": "P033", "name": "Utility Jumpsuit", "gender": "womens", "category": "Jumpsuits", "description": "Functional utility jumpsuit with multiple pockets, belt loops, and adjustable fit. One-piece ease with style.", "price": 128, "cost": 65, "color": [{"name": "Olive", "hex": "#808000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Canvas", "sales": {"domestic": 98, "international": 42, "total": 140}}, {"id": "P034", "name": "Peplum Top", "gender": "womens", "category": "Tops", "description": "Fitted peplum top with flared hem detail and back zip. Flattering and feminine silhouette.", "price": 76, "cost": 25, "color": [{"name": "Dusty Rose", "hex": "#DCAE96"}], "sizes": ["XS", "S", "M", "L"], "material": "Ponte Knit", "sales": {"domestic": 167, "international": 58, "total": 225}}, {"id": "P035", "name": "High-Rise Flare Jeans", "gender": "womens", "category": "Bottoms", "description": "Retro-inspired flare jeans with high rise and flattering leg-lengthening silhouette. Vintage cool.", "price": 105, "cost": 85, "color": [{"name": "Dark Wash", "hex": "#2F4F4F"}], "sizes": ["24", "26", "28", "30", "32"], "material": "Stretch Denim", "sales": {"domestic": 234, "international": 91, "total": 325}}, {"id": "P036", "name": "Teddy Bear Jacket", "gender": "womens", "category": "Outerwear", "description": "Ultra-plush sherpa fleece jacket with zip front and side pockets. Incredibly soft and warm.", "price": 175, "cost": 90, "color": [{"name": "Brown", "hex": "#8B4513"}], "sizes": ["S", "M", "L", "XL"], "material": "Sherpa Fleece", "sales": {"domestic": 189, "international": 67, "total": 256}}, {"id": "P037", "name": "Tiered Maxi Skirt", "gender": "womens", "category": "Bottoms", "description": "Bohemian tiered maxi skirt in airy cotton gauze with elasticated waist. Free-spirited and flowing.", "price": 89, "cost": 35, "color": [{"name": "Rust", "hex": "#B7410E"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Gauze", "sales": {"domestic": 145, "international": 56, "total": 201}}, {"id": "P038", "name": "Mesh Long Sleeve Top", "gender": "mens", "category": "Tops", "description": "Sheer mesh top with long sleeves and fitted silhouette. Perfect for layering or making a statement.", "price": 42, "cost": 15, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Polyester Mesh", "sales": {"domestic": 267, "international": 98, "total": 365}}, {"id": "P039", "name": "Linen Blend Blazer", "gender": "mens", "category": "Outerwear", "description": "Relaxed linen blend blazer with single-button closure and notch lapels. Effortless summer sophistication.", "price": 185, "cost": 100, "color": [{"name": "Stone", "hex": "#928E85"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Linen Blend", "sales": {"domestic": 123, "international": 57, "total": 180}}, {"id": "P040", "name": "Smocked Sundress", "gender": "womens", "category": "Dresses", "description": "Sweet sundress with smocked bodice and flowy skirt. Perfect for picnics and sunny days.", "price": 95, "cost": 35, "color": [{"name": "Yellow", "hex": "#FFFF00"}], "sizes": ["XS", "S", "M", "L"], "material": "Cotton Poplin", "sales": {"domestic": 178, "international": 62, "total": 240}}, {"id": "P041", "name": "Mock Neck Sweater", "gender": "mens", "category": "Sweaters", "description": "Modern mock neck sweater with slim fit and soft texture. Polished and comfortable.", "price": 98, "cost": 35, "color": [{"name": "Burgundy", "hex": "#800020"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Acrylic Blend", "sales": {"domestic": 198, "international": 76, "total": 274}}, {"id": "P042", "name": "Cargo Pants", "gender": "mens", "category": "Bottoms", "description": "Utilitarian cargo pants with multiple pockets and relaxed fit. Function meets fashion.", "price": 88, "cost": 40, "color": [{"name": "Army Green", "hex": "#4B5320"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Twill", "sales": {"domestic": 211, "international": 84, "total": 295}}, {"id": "P043", "name": "Off-Shoulder Crop Top", "gender": "womens", "category": "Tops", "description": "Flirty off-shoulder crop top in ribbed cotton with elastic neckline. Shows just the right amount of skin.", "price": 52, "cost": 15, "color": [{"name": "White", "hex": "#FFFFFF"}], "sizes": ["XS", "S", "M", "L"], "material": "Cotton Rib", "sales": {"domestic": 289, "international": 101, "total": 390}}, {"id": "P044", "name": "Belted Trench Dress", "gender": "womens", "category": "Dresses", "description": "Sophisticated shirt dress with trench coat styling, belted waist, and button front. Classic with modern flair.", "price": 168, "cost": 100, "color": [{"name": "Tan", "hex": "#D2B48C"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Blend", "sales": {"domestic": 134, "international": 46, "total": 180}}, {"id": "P045", "name": "Hooded Parka", "gender": "mens", "category": "Outerwear", "description": "Insulated parka with drawstring hood and multiple zip pockets. Maximum warmth and protection.", "price": 245, "cost": 135, "color": [{"name": "Navy", "hex": "#000080"}], "sizes": ["S", "M", "L", "XL"], "material": "Polyester", "sales": {"domestic": 156, "international": 62, "total": 218}}, {"id": "P046", "name": "Tie-Dye Sweatshirt", "gender": "womens", "category": "Sweaters", "description": "Fun and relaxed tie-dye sweatshirt in soft cotton fleece with crew neck. Unique colorway on every piece.", "price": 72, "cost": 35, "color": [{"name": "Multicolor", "hex": "#9370DB"}], "sizes": ["S", "M", "L", "XL"], "material": "Cotton Fleece", "sales": {"domestic": 312, "international": 128, "total": 440}}, {"id": "P047", "name": "Leather Mini Skirt", "gender": "womens", "category": "Bottoms", "description": "Edgy faux leather mini skirt with high waist and back zip. Pairs perfectly with boots or sneakers.", "price": 158, "cost": 105, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L"], "material": "Faux Leather", "sales": {"domestic": 178, "international": 67, "total": 245}}, {"id": "P048", "name": "Chambray Shirt Dress", "gender": "womens", "category": "Dresses", "description": "Easy button-front shirt dress in soft chambray with rolled sleeves and chest pockets. Effortlessly versatile.", "price": 85, "cost": 35, "color": [{"name": "Light Blue", "hex": "#ADD8E6"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Chambray", "sales": {"domestic": 223, "international": 87, "total": 310}}, {"id": "P049", "name": "Cropped Cardigan", "gender": "mens", "category": "Sweaters", "description": "Sweet cropped cardigan in cotton knit with button front and three-quarter sleeves. Vintage-inspired charm.", "price": 68, "cost": 20, "color": [{"name": "Mint", "hex": "#98FF98"}], "sizes": ["XS", "S", "M", "L"], "material": "Cotton Knit", "sales": {"domestic": 245, "international": 93, "total": 338}}, {"id": "P050", "name": "Wide Belt", "gender": "womens", "category": "Accessories", "description": "Statement wide belt in faux leather with cinching buckle. Instantly elevates any outfit.", "price": 45, "cost": 35, "color": [{"name": "Tan", "hex": "#D2B48C"}], "sizes": ["S/M", "L/XL"], "material": "Faux Leather", "sales": {"domestic": 398, "international": 152, "total": 550}}, {"id": "P051", "name": "Satin Midi Skirt", "gender": "womens", "category": "Bottoms", "description": "Luxe satin midi skirt with bias cut and side slit. Drapes beautifully and moves with elegant fluidity.", "price": 95, "cost": 55, "color": [{"name": "Emerald", "hex": "#50C878"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Polyester Satin", "sales": {"domestic": 187, "international": 73, "total": 260}}, {"id": "P052", "name": "Quilted Crossbody Bag", "gender": "womens", "category": "Accessories", "description": "Chic quilted crossbody with chain strap and multiple compartments. Compact yet surprisingly spacious.", "price": 78, "cost": 30, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["One Size"], "material": "Vegan Leather", "sales": {"domestic": 456, "international": 198, "total": 654}}, {"id": "P053", "name": "Cashmere Beanie", "gender": "mens", "category": "Accessories", "description": "Soft cashmere beanie with ribbed knit and folded brim. Warmth and luxury for cold days.", "price": 65, "cost": 50, "color": [{"name": "Gray", "hex": "#808080"}], "sizes": ["One Size"], "material": "100% Cashmere", "sales": {"domestic": 289, "international": 112, "total": 401}}, {"id": "P054", "name": "Halter Neck Top", "gender": "womens", "category": "Tops", "description": "Sleek halter top with tie neck and open back. Perfect for warm evenings and special occasions.", "price": 58, "cost": 20, "color": [{"name": "Wine", "hex": "#722F37"}], "sizes": ["XS", "S", "M", "L"], "material": "Jersey Knit", "sales": {"domestic": 203, "international": 76, "total": 279}}, {"id": "P055", "name": "Corduroy Overalls", "gender": "mens", "category": "Jumpsuits", "description": "Vintage-inspired corduroy overalls with adjustable straps and multiple pockets. Nostalgic and practical.", "price": 118, "cost": 90, "color": [{"name": "Caramel", "hex": "#C68E17"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Corduroy", "sales": {"domestic": 134, "international": 47, "total": 181}}, {"id": "P056", "name": "Silk Scarf", "gender": "womens", "category": "Accessories", "description": "Square silk scarf with hand-rolled edges and artistic print. Wear around neck, in hair, or on handbags.", "price": 52, "cost": 20, "color": [{"name": "Multicolor", "hex": "#FF6B9D"}], "sizes": ["One Size"], "material": "100% Silk", "sales": {"domestic": 367, "international": 143, "total": 510}}, {"id": "P057", "name": "Knit Midi Dress", "gender": "womens", "category": "Dresses", "description": "Form-fitting knit dress with long sleeves and turtleneck. Sophisticated simplicity with stretchy comfort.", "price": 108, "cost": 35, "color": [{"name": "Charcoal", "hex": "#36454F"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Ribbed Knit", "sales": {"domestic": 198, "international": 82, "total": 280}}, {"id": "P058", "name": "Leather Loafers", "gender": "mens", "category": "Shoes", "description": "Classic leather loafers with cushioned insole and low heel. Timeless footwear for everyday elegance.", "price": 145, "cost": 100, "color": [{"name": "Brown", "hex": "#8B4513"}], "sizes": ["6", "7", "8", "9", "10"], "material": "Genuine Leather", "sales": {"domestic": 234, "international": 89, "total": 323}}, {"id": "P059", "name": "Faux Leather Pants", "gender": "womens", "category": "Bottoms", "description": "Sleek faux leather pants with high waist and skinny fit. Bold statement piece with all-day comfort.", "price": 128, "cost": 35, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Faux Leather", "sales": {"domestic": 167, "international": 64, "total": 231}}, {"id": "P060", "name": "Ruffled Blouse", "gender": "womens", "category": "Tops", "description": "Romantic blouse with cascading ruffles, pussy bow tie, and sheer sleeves. Feminine and eye-catching.", "price": 85, "cost": 20, "color": [{"name": "Cream", "hex": "#FFFDD0"}], "sizes": ["XS", "S", "M", "L"], "material": "Chiffon", "sales": {"domestic": 145, "international": 58, "total": 203}}, {"id": "P061", "name": "Chelsea Ankle Boots", "gender": "mens", "category": "Shoes", "description": "Classic Chelsea boots with elastic side panels and block heel. Versatile style for any season.", "price": 165, "cost": 60, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["6", "7", "8", "9", "10"], "material": "Faux Leather", "sales": {"domestic": 312, "international": 134, "total": 446}}, {"id": "P062", "name": "Cashmere Wrap Scarf", "gender": "womens", "category": "Accessories", "description": "Oversized cashmere wrap scarf that doubles as a shawl. Ultimate luxury and warmth.", "price": 158, "cost": 65, "color": [{"name": "Camel", "hex": "#C19A6B"}], "sizes": ["One Size"], "material": "100% Cashmere", "sales": {"domestic": 189, "international": 76, "total": 265}}, {"id": "P063", "name": "Backless Bodysuit", "gender": "womens", "category": "Tops", "description": "Daring backless bodysuit with high neck and long sleeves. Sleek silhouette with dramatic impact.", "price": 68, "cost": 20, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L"], "material": "Modal Blend", "sales": {"domestic": 223, "international": 87, "total": 310}}, {"id": "P064", "name": "Plaid Blazer", "gender": "mens", "category": "Outerwear", "description": "Oversized plaid blazer with double-breasted front and padded shoulders. Power dressing with pattern.", "price": 195, "cost": 100, "color": [{"name": "Gray/Black", "hex": "#708090"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Wool Blend", "sales": {"domestic": 156, "international": 61, "total": 217}}, {"id": "P065", "name": "Silk Pajama Set", "gender": "mens", "category": "Loungewear", "description": "Luxurious silk pajama set with contrast piping and button-front top. Sleep in style and comfort.", "price": 185, "cost": 70, "color": [{"name": "Navy", "hex": "#000080"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "100% Silk", "sales": {"domestic": 178, "international": 69, "total": 247}}, {"id": "P066", "name": "Cowl Neck Sweater Dress", "gender": "womens", "category": "Dresses", "description": "Cozy sweater dress with draped cowl neck and relaxed fit. Effortless warmth and elegance.", "price": 135, "cost": 90, "color": [{"name": "Burgundy", "hex": "#800020"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Wool Blend", "sales": {"domestic": 201, "international": 78, "total": 279}}, {"id": "P067", "name": "Bucket Hat", "gender": "mens", "category": "Accessories", "description": "Trendy bucket hat in soft canvas with wide brim. Sun protection meets streetwear style.", "price": 38, "cost": 15, "color": [{"name": "Khaki", "hex": "#C3B091"}], "sizes": ["S/M", "L/XL"], "material": "Cotton Canvas", "sales": {"domestic": 398, "international": 156, "total": 554}}, {"id": "P068", "name": "Suede Ankle Boots", "gender": "mens", "category": "Shoes", "description": "Sophisticated suede ankle boots with pointed toe and kitten heel. Refined elegance for any occasion.", "price": 178, "cost": 125, "color": [{"name": "Taupe", "hex": "#B38B6D"}], "sizes": ["6", "7", "8", "9", "10"], "material": "Suede", "sales": {"domestic": 245, "international": 98, "total": 343}}, {"id": "P069", "name": "Ribbed Lounge Set", "gender": "mens", "category": "Loungewear", "description": "Matching ribbed lounge set with crop top and high-waisted leggings. Comfort meets contemporary style.", "price": 88, "cost": 30, "color": [{"name": "Sage", "hex": "#9DC183"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Rib", "sales": {"domestic": 412, "international": 167, "total": 579}}, {"id": "P070", "name": "Statement Earrings", "gender": "womens", "category": "Accessories", "description": "Bold geometric earrings with gold-tone finish. Instantly elevate any outfit with these showstoppers.", "price": 42, "cost": 15, "color": [{"name": "Gold", "hex": "#FFD700"}], "sizes": ["One Size"], "material": "Metal Alloy", "sales": {"domestic": 523, "international": 201, "total": 724}}, {"id": "P071", "name": "Asymmetric Hem Dress", "gender": "womens", "category": "Dresses", "description": "Modern dress with asymmetric hemline and one-shoulder design. Architectural and striking.", "price": 152, "cost": 70, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L"], "material": "Crepe", "sales": {"domestic": 134, "international": 52, "total": 186}}, {"id": "P072", "name": "Cashmere Joggers", "gender": "womens", "category": "Loungewear", "description": "Luxurious cashmere joggers with drawstring waist and tapered leg. Elevated comfort for lounging.", "price": 225, "cost": 175, "color": [{"name": "Heather Gray", "hex": "#BCC6CC"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "100% Cashmere", "sales": {"domestic": 98, "international": 41, "total": 139}}, {"id": "P073", "name": "Structured Tote Bag", "gender": "womens", "category": "Accessories", "description": "Professional structured tote with interior pockets and detachable strap. Perfect for work or weekend.", "price": 125, "cost": 35, "color": [{"name": "Cognac", "hex": "#9F4624"}], "sizes": ["One Size"], "material": "Vegan Leather", "sales": {"domestic": 367, "international": 148, "total": 515}}, {"id": "P074", "name": "Platform Sneakers", "gender": "womens", "category": "Shoes", "description": "On-trend platform sneakers with chunky sole and leather upper. Comfort with height boost.", "price": 298, "cost": 135, "color": [{"name": "White", "hex": "#FFFFFF"}], "sizes": ["6", "7", "8", "9", "10"], "material": "Leather", "sales": {"domestic": 445, "international": 189, "total": 634}}, {"id": "P075", "name": "Cut-Out Midi Dress", "gender": "womens", "category": "Dresses", "description": "Sultry midi dress with strategic cut-outs and bodycon fit. Show some skin with sophisticated style.", "price": 118, "cost": 80, "color": [{"name": "Red", "hex": "#FF0000"}], "sizes": ["XS", "S", "M", "L"], "material": "Jersey Knit", "sales": {"domestic": 167, "international": 62, "total": 229}}, {"id": "P076", "name": "Embroidered Denim Jacket", "gender": "womens", "category": "Outerwear", "description": "Classic denim jacket enhanced with beautiful floral embroidery on back and sleeves. Artisan detail meets casual cool.", "price": 135, "cost": 95, "color": [{"name": "Medium Wash", "hex": "#5B7C99"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Denim", "sales": {"domestic": 178, "international": 71, "total": 249}}, {"id": "P077", "name": "Leather Belt Bag", "gender": "womens", "category": "Accessories", "description": "Hands-free leather belt bag with adjustable strap and zip closure. Practical style for active lifestyles.", "price": 72, "cost": 35, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["One Size"], "material": "Genuine Leather", "sales": {"domestic": 389, "international": 156, "total": 545}}, {"id": "P078", "name": "Satin Bomber Jacket", "gender": "womens", "category": "Outerwear", "description": "Luxe satin bomber with quilted lining and zip front. Sporty silhouette in elevated fabric.", "price": 348, "cost": 125, "color": [{"name": "Emerald", "hex": "#50C878"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Polyester Satin", "sales": {"domestic": 156, "international": 59, "total": 215}}, {"id": "P079", "name": "Knit Bralette", "gender": "womens", "category": "Intimates", "description": "Soft knit bralette with removable pads and adjustable straps. Comfortable support for everyday wear.", "price": 35, "cost": 10, "color": [{"name": "Nude", "hex": "#E3BC9A"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Blend", "sales": {"domestic": 467, "international": 178, "total": 645}}, {"id": "P080", "name": "High-Neck Maxi Dress", "gender": "womens", "category": "Dresses", "description": "Elegant maxi dress with high neckline and fitted bodice. Flows gracefully with timeless sophistication.", "price": 165, "cost": 100, "color": [{"name": "Forest Green", "hex": "#228B22"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Jersey Knit", "sales": {"domestic": 189, "international": 73, "total": 262}}, {"id": "P081", "name": "Wool Fedora Hat", "gender": "mens", "category": "Accessories", "description": "Classic fedora in soft wool felt with ribbon band. Adds instant polish to any ensemble.", "price": 98, "cost": 35, "color": [{"name": "Camel", "hex": "#C19A6B"}], "sizes": ["S/M", "L/XL"], "material": "Wool Felt", "sales": {"domestic": 234, "international": 92, "total": 326}}, {"id": "P082", "name": "Seamless Bodysuit", "gender": "womens", "category": "Intimates", "description": "Ultra-smooth seamless bodysuit with scoop neck and thong bottom. Invisible under clothes.", "price": 48, "cost": 10, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Nylon Spandex", "sales": {"domestic": 512, "international": 198, "total": 710}}, {"id": "P083", "name": "Corset Top", "gender": "womens", "category": "Tops", "description": "Structured corset top with boning and lace-up back. Dramatic shape and vintage-inspired appeal.", "price": 95, "cost": 35, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L"], "material": "Cotton Blend", "sales": {"domestic": 167, "international": 64, "total": 231}}, {"id": "P084", "name": "Wool Coat", "gender": "mens", "category": "Outerwear", "description": "Timeless wool coat with notch collar and single-breasted closure. Investment piece for years to come.", "price": 395, "cost": 200, "color": [{"name": "Charcoal", "hex": "#36454F"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Wool Blend", "sales": {"domestic": 98, "international": 43, "total": 141}}, {"id": "P085", "name": "Strappy Heeled Sandals", "gender": "womens", "category": "Shoes", "description": "Delicate strappy sandals with slim heel and ankle tie. Perfect for special occasions and evenings out.", "price": 168, "cost": 90, "color": [{"name": "Nude", "hex": "#E3BC9A"}], "sizes": ["6", "7", "8", "9", "10"], "material": "Faux Leather", "sales": {"domestic": 278, "international": 112, "total": 390}}, {"id": "P086", "name": "Crochet Beach Cover-Up", "gender": "womens", "category": "Swimwear", "description": "Breezy crochet cover-up with open weave and relaxed fit. Beach-to-bar versatility.", "price": 78, "cost": 35, "color": [{"name": "White", "hex": "#FFFFFF"}], "sizes": ["XS", "S", "M", "L"], "material": "Cotton Crochet", "sales": {"domestic": 145, "international": 58, "total": 203}}, {"id": "P087", "name": "High-Waisted Bikini Set", "gender": "womens", "category": "Swimwear", "description": "Retro-inspired high-waisted bikini with supportive top and flattering bottom. Vintage glamour for the pool.", "price": 88, "cost": 30, "color": [{"name": "Red", "hex": "#FF0000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Nylon Spandex", "sales": {"domestic": 312, "international": 128, "total": 440}}, {"id": "P088", "name": "Cashmere Gloves", "gender": "mens", "category": "Accessories", "description": "Luxuriously soft cashmere gloves with ribbed cuffs. Keep hands warm in ultimate comfort.", "price": 75, "cost": 55, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["S/M", "L/XL"], "material": "100% Cashmere", "sales": {"domestic": 201, "international": 84, "total": 285}}, {"id": "P089", "name": "Pintuck Blouse", "gender": "womens", "category": "Tops", "description": "Refined blouse with delicate pintuck detailing and mother-of-pearl buttons. Understated elegance.", "price": 92, "cost": 70, "color": [{"name": "Ivory", "hex": "#FFFFF0"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Poplin", "sales": {"domestic": 178, "international": 69, "total": 247}}, {"id": "P090", "name": "Mules with Block Heel", "gender": "womens", "category": "Shoes", "description": "Easy slip-on mules with comfortable block heel and pointed toe. Effortless sophistication.", "price": 205, "cost": 105, "color": [{"name": "Tan", "hex": "#D2B48C"}], "sizes": ["6", "7", "8", "9", "10"], "material": "Faux Leather", "sales": {"domestic": 345, "international": 139, "total": 484}}, {"id": "P091", "name": "Quilted Puffer Jacket", "gender": "womens", "category": "Outerwear", "description": "Warm quilted puffer with high collar and zip pockets. Lightweight insulation for cold weather.", "price": 185, "cost": 95, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Nylon", "sales": {"domestic": 223, "international": 87, "total": 310}}, {"id": "P092", "name": "Lace Bralette Set", "gender": "womens", "category": "Intimates", "description": "Delicate lace bralette and matching panty set. Romantic and feminine lingerie essentials.", "price": 82, "cost": 35, "color": [{"name": "Blush", "hex": "#FFB6C1"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Lace", "sales": {"domestic": 389, "international": 147, "total": 536}}, {"id": "P093", "name": "Tweed Mini Skirt", "gender": "womens", "category": "Bottoms", "description": "Chic tweed mini with frayed edges and zip closure. Parisian-inspired sophistication.", "price": 85, "cost": 25, "color": [{"name": "Pink/White", "hex": "#FFC0CB"}], "sizes": ["XS", "S", "M", "L"], "material": "Tweed", "sales": {"domestic": 198, "international": 76, "total": 274}}, {"id": "P094", "name": "Oversized Sunglasses", "gender": "womens", "category": "Accessories", "description": "Glamorous oversized sunglasses with UV protection. Classic style with modern flair.", "price": 95, "cost": 65, "color": [{"name": "Tortoise", "hex": "#8B4513"}], "sizes": ["One Size"], "material": "Acetate", "sales": {"domestic": 478, "international": 192, "total": 670}}, {"id": "P095", "name": "Cashmere Robe", "gender": "womens", "category": "Loungewear", "description": "Sumptuous cashmere robe with shawl collar and tie waist. Ultimate luxury for relaxing at home.", "price": 385, "cost": 225, "color": [{"name": "Oatmeal", "hex": "#E9DCC9"}], "sizes": ["S/M", "L/XL"], "material": "100% Cashmere", "sales": {"domestic": 67, "international": 28, "total": 95}}, {"id": "P096", "name": "One-Piece Swimsuit", "gender": "womens", "category": "Swimwear", "description": "Sleek one-piece with plunging neckline and low back. Sophisticated swim style with support.", "price": 125, "cost": 80, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Nylon Spandex", "sales": {"domestic": 267, "international": 108, "total": 375}}, {"id": "P097", "name": "Tie-Front Crop Top", "gender": "womens", "category": "Tops", "description": "Playful crop top with front tie detail and short sleeves. Sweet and flirty summer staple.", "price": 45, "cost": 12, "color": [{"name": "Yellow", "hex": "#FFFF00"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Cotton Poplin", "sales": {"domestic": 334, "international": 126, "total": 460}}, {"id": "P098", "name": "Leather Shoulder Bag", "gender": "womens", "category": "Accessories", "description": "Classic leather shoulder bag with gold hardware and interior pockets. Timeless everyday essential.", "price": 215, "cost": 135, "color": [{"name": "Black", "hex": "#000000"}], "sizes": ["One Size"], "material": "Genuine Leather", "sales": {"domestic": 289, "international": 117, "total": 406}}, {"id": "P099", "name": "Culottes", "gender": "womens", "category": "Bottoms", "description": "Wide-leg culottes with high waist and cropped length. Modern silhouette with vintage inspiration.", "price": 98, "cost": 35, "color": [{"name": "Navy", "hex": "#000080"}], "sizes": ["XS", "S", "M", "L", "XL"], "material": "Linen Blend", "sales": {"domestic": 156, "international": 62, "total": 218}}, {"id": "P100", "name": "Embellished Clutch", "gender": "womens", "category": "Accessories", "description": "Evening clutch adorned with crystals and beading. Statement piece for special occasions.", "price": 88, "cost": 70, "color": [{"name": "Gold", "hex": "#FFD700"}], "sizes": ["One Size"], "material": "Satin", "sales": {"domestic": 178, "international": 73, "total": 251}}];
-    // ---------- Cart Counter ----------
+    let productData = []
+    let cartData = []
+
+    // ----- CART COUNTER -----
     let cartCount = 0;
+    let selectedShippingMethod = "Standard"; 
+    let selectedShippingDestination = "Canada";
+
     const cartCountBadge = document.querySelector("#cartCount");
     cartCountBadge.textContent = cartCount;
     const views = document.querySelectorAll(".spa-view");
 
     // helper to show a view
     function showView(name) {
-    views.forEach(v => v.classList.add("hidden"));
-    document.querySelector(`#view-${name}`).classList.remove("hidden");
+		views.forEach(v => v.classList.add("hidden"));
+		document.querySelector(`#view-${name}`).classList.remove("hidden");
+
+        if (name === "women" || name === "men") {
+            listCategory(name);
+        } else if (name === "cart") {
+            renderCart();
+        }
     }
 
     // header nav buttons
     document.querySelectorAll("header [data-view]").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const view = btn.dataset.view;   // no getAttribute
-        showView(view);
-    });
+		btn.addEventListener("click", () => {
+			const view = btn.dataset.view;   // no getAttribute
+			showView(view);
+		});
     });
 
-    // ---------- About modal ----------
+    // ----- ABOUT MODAL -----
     const aboutModal = document.querySelector("#aboutModal");
     document.querySelector("#aboutBtn")
     .addEventListener("click", () => aboutModal.showModal());
@@ -29,20 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#closeX")
     .addEventListener("click", () => aboutModal.close());
 
-        document.querySelector("#closeAbout")
+    document.querySelector("#closeAbout")
     .addEventListener("click", () => aboutModal.close());
 
-    // ---------- Browse category navigation ----------
+    // ----- BROWSE CATEGORY NAV -----
     document.querySelectorAll("[data-browse-category]").forEach(btn => {
     btn.addEventListener("click", () => {
         showView("browse");
     });
     });
 
-    // Utility function to pick a random element
+    // utility function to pick a random element
     const randomItem = arr => arr[Math.floor(Math.random() * arr.length)];
 
-    // Utility function to pick N random items
+    // utility function to pick N random items
     const randomMany = (arr, count) => {
     const copy = [...arr];
     const selected = [];
@@ -52,6 +63,265 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     return selected;
     };
+
+    function renderCart() {
+        const container = document.getElementById("cartContent");
+        if (!container) return;
+    
+        // if cart is empty
+        if (cartData.length === 0) {
+            container.innerHTML = `
+                <p class="text-sm text-gray-500 mt-4">
+                    Your cart is empty.
+                </p>
+            `;
+            cartCountBadge.textContent = 0;
+            return;
+        }
+    
+        let merchandiseTotal = 0;
+    
+        // ----- HEADER -----
+        let html = `
+            <!-- COLUMN HEADER -->
+            <div class="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr] text-sm font-semibold pb-3 border-b border-gray-300">
+                <div>Items</div>
+                <div class="text-center">Color</div>
+                <div class="text-center">Size</div>
+                <div class="text-center">Price</div>
+                <div class="text-center">Quantity</div>
+                <div class="text-center">Subtotal</div>
+            </div>
+        `;
+    
+        // ----- ITEM ROWS -----
+        cartData.forEach((item, index) => {
+            const subtotal = item.price * item.quantity;
+            merchandiseTotal += subtotal;
+    
+            const colorHex = item.color || "#000000";
+            const sizeLabel = item.size || "-";
+    
+            html += `
+                <div class="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr] text-sm items-center py-6 border-b border-gray-200">
+                    <!-- Items column -->
+                    <div class="flex items-center gap-4">
+                        <button
+                            class="border border-gray-400 px-2 py-1 leading-none"
+                            data-remove-index="${index}">
+                            -
+                        </button>
+    
+                        <div class="border border-gray-400 w-20 h-24 flex items-center justify-center text-gray-400 text-xs">
+                            placeholder
+                        </div>
+    
+                        <span>${item.name}</span>
+                    </div>
+    
+                    <!-- Color -->
+                    <div class="flex justify-center">
+                        <div class="w-5 h-5" style="background-color:${colorHex};"></div>
+                    </div>
+    
+                    <!-- Size -->
+                    <div class="flex justify-center">
+                        <div class="border border-gray-400 px-3 py-1 text-xs">${sizeLabel}</div>
+                    </div>
+    
+                    <!-- Price -->
+                    <div class="text-center">$${item.price.toFixed(2)}</div>
+    
+                    <!-- Quantity -->
+                    <div class="text-center">${item.quantity}</div>
+    
+                    <!-- Subtotal -->
+                    <div class="text-center">$${subtotal.toFixed(2)}</div>
+                </div>
+            `;
+        });
+    
+        // ----- BOTTOM SECTION (Shipping & Summary) -----
+        html += `
+            <!-- Bottom Section -->
+            <div class="mt-10 flex flex-wrap gap-12 items-start">
+    
+                <!-- Shipping -->
+                <div class="w-56">
+                    <h3 class="font-semibold mb-3">Shipping</h3>
+    
+                    <div class="mb-4">
+                        <label class="block text-xs mb-1">Method</label>
+                        <select id="shippingMethodSelect" class="w-full border border-gray-400 px-3 py-2 text-sm bg-white">
+                            <option value="Standard" ${selectedShippingMethod === "Standard" ? "selected" : ""}>Standard</option>
+                            <option value="Express" ${selectedShippingMethod === "Express" ? "selected" : ""}>Express</option>
+                            <option value="Priority" ${selectedShippingMethod === "Priority" ? "selected" : ""}>Priority</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label class="block text-xs mb-1">Destination</label>
+                        <select id="shippingDestinationSelect" class="w-full border border-gray-400 px-3 py-2 text-sm bg-white">
+                            <option value="Canada" ${selectedShippingDestination === "Canada" ? "selected" : ""}>Canada</option>
+                            <option value="United States" ${selectedShippingDestination === "United States" ? "selected" : ""}>United States</option>
+                            <option value="International" ${selectedShippingDestination === "International" ? "selected" : ""}>International</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <!-- Summary -->
+                <div class="flex-1 max-w-sm">
+                    <h3 class="font-semibold mb-3">Summary</h3>
+    
+                    <div class="border border-gray-400 p-4 space-y-2">
+                        <div class="flex justify-between">
+                            <span>Merchandise</span><span id="summaryMerch">$${merchandiseTotal.toFixed(2)}</span>
+                        </div>
+    
+                        <div class="flex justify-between">
+                            <span>Shipping</span><span id="summaryShipping">$0.00</span>
+                        </div>
+    
+                        <div class="flex justify-between">
+                            <span>Tax</span><span id="summaryTax">$0.00</span>
+                        </div>
+    
+                        <div class="flex justify-between font-semibold pt-2 border-t border-gray-300 mt-2">
+                            <span>Total</span><span id="summaryTotal">$0.00</span>
+                        </div>
+                    </div>
+    
+                    <!-- Checkout Button -->
+                    <div class="mt-4 flex justify-center">
+                        <button class="border border-gray-500 px-8 py-2 font-semibold bg-gray-100">
+                            Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    
+        // put it all into the container
+        container.innerHTML = html;
+    
+        // ----- SHIPPING & TAX CALCULATION -----
+        const methodSelect = container.querySelector("#shippingMethodSelect");
+        const destSelect = container.querySelector("#shippingDestinationSelect");
+        const shippingSpan = container.querySelector("#summaryShipping");
+        const taxSpan = container.querySelector("#summaryTax");
+        const totalSpan = container.querySelector("#summaryTotal");
+    
+        function computeShipping(method, destination) {
+            // free shipping if merchandise over $500
+            if (merchandiseTotal > 500) {
+                return 0;
+            }
+    
+            // costs by method & destination
+            const table = {
+                Standard: { "Canada": 10, "United States": 15, "International": 20 },
+                Express:  { "Canada": 25, "United States": 25, "International": 30 },
+                Priority: { "Canada": 35, "United States": 50, "International": 50 }
+            };
+    
+            return table[method][destination];
+        }
+    
+        function updateSummary() {
+            const method = methodSelect.value;
+            const destination = destSelect.value;
+    
+            // remember choices for next render
+            selectedShippingMethod = method;
+            selectedShippingDestination = destination;
+    
+            const shipping = computeShipping(method, destination);
+    
+            // tax 5% only if Canada
+            const tax = destination === "Canada" ? merchandiseTotal * 0.05 : 0;
+    
+            const grandTotal = merchandiseTotal + shipping + tax;
+    
+            shippingSpan.textContent = `$${shipping.toFixed(2)}`;
+            taxSpan.textContent = `$${tax.toFixed(2)}`;
+            totalSpan.textContent = `$${grandTotal.toFixed(2)}`;
+        }
+    
+        // initial calculation
+        updateSummary();
+    
+        // update whenever user changes shipping options
+        methodSelect.addEventListener("change", updateSummary);
+        destSelect.addEventListener("change", updateSummary);
+    
+        // ----- REMOVE BUTTON HANDLERS -----
+        container.querySelectorAll("[data-remove-index]").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const idx = Number(btn.dataset.removeIndex);
+                if (!isNaN(idx)) {
+                    cartData.splice(idx, 1);
+    
+                    // update cart count
+                    cartCount = cartData.reduce((sum, item) => sum + item.quantity, 0);
+                    cartCountBadge.textContent = cartCount;
+    
+                    renderCart();
+                }
+            });
+        });
+    }
+    
+    function listCategory(gender) {
+        const container = document.getElementById("list-" + gender + "-categories");
+        if (!container) return;
+
+        // collect unique categories
+        const categorySet = new Set();
+        productData.forEach(product => {
+            if (product.category && product.gender === gender + "s") {
+                categorySet.add(product.category);
+            }
+        });
+
+        // sort alphabetically
+        const categories = Array.from(categorySet).sort((a, b) =>
+            a.localeCompare(b)
+        );
+
+        // clear existing content
+        container.innerHTML = "";
+
+        categories.forEach(p => {
+            container.appendChild(createCategoryCard(gender, p));
+        });
+
+    }
+
+    function createCategoryCard(gender, name) {
+        const card = document.createElement("div");
+        card.classList.add("text-center", gender + "-category-card", "cursor-pointer");
+        card.setAttribute("data-category", name);
+        card.setAttribute("data-gender", gender+"s");
+
+        const placeholder = document.createElement("div");
+        placeholder.classList.add("border", "h-40", "flex", "items-center", "justify-center");
+
+        const placeholderSpan = document.createElement("span");
+        placeholderSpan.classList.add("text-gray-400");
+        placeholderSpan.textContent = name;
+
+        placeholder.appendChild(placeholderSpan);
+
+        const category = document.createElement("p");
+        category.classList.add("mt-2", "font-medium");
+        category.textContent = name;
+
+        // Add to card
+        card.appendChild(placeholder);
+        card.appendChild(category);
+
+        return card;
+    }
 
     function createProductCard(product) {
         const card = document.createElement("div");
@@ -72,14 +342,13 @@ document.addEventListener("DOMContentLoaded", () => {
         category.classList.add("text-sm", "text-gray-500");
         category.textContent = product.category;
 
-        // Add to card
+        // add to card
         card.appendChild(name);
         card.appendChild(price);
         card.appendChild(category);
 
         return card;
     }
-
 
     function loadHomeSections() {
 
@@ -119,4 +388,572 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-})
+    // ----- CATEGORY CLICK -----
+    document.addEventListener("click", (e) => {
+		const card = e.target.closest(".women-category-card, .men-category-card");
+		if (!card) return;
+
+		const category = card.dataset.category;
+        const gender   = card.dataset.gender;
+
+		// switch view
+		showView("browse");
+
+		// clear all filters first
+		document.querySelectorAll(".filter-checkbox").forEach(cb => cb.checked = false);
+
+		// apply women filter
+		document.querySelectorAll('.filter-checkbox[data-filter-type="gender"]').forEach(cb => {
+			if (cb.dataset.filterValue === gender) cb.checked = true;
+		});
+
+		// apply category filter
+		document.querySelectorAll('.filter-checkbox[data-filter-type="category"]').forEach(cb => {
+			if (cb.dataset.filterValue === category) cb.checked = true;
+		});
+
+		// update UI & product grid
+		refreshFiltersAndProducts();
+
+		// scroll to top of browse view
+		document.getElementById("productGrid")?.scrollIntoView({ behavior: "smooth" });
+	});
+	
+    // ----- SIDEBAR FILTER -----
+
+    function populateColorFilters(productData) {
+        const container = document.getElementById("filterColors");
+        if (!container) return;
+
+        const colorMap = new Map();
+
+        productData.forEach(product => {
+            if (product.color) {
+                product.color.forEach(c => {
+                    if (!colorMap.has(c.name)) {
+                        colorMap.set(c.name, c.hex);
+                    }
+                });
+            }
+        });
+
+        container.innerHTML = "";
+
+        colorMap.forEach((hex, name) => {
+            const label = document.createElement("label");
+            label.className = "flex items-center justify-between gap-2 cursor-pointer";
+
+            label.innerHTML = `
+                <div class="flex items-center gap-2">
+                    <input type="checkbox"
+                           class="w-4 h-4 filter-checkbox"
+                           data-filter-type="color"
+                           data-filter-value="${name}">
+                    <span>${name}</span>
+                </div>
+                <div class="w-4 h-4 border border-gray-400" style="background-color:${hex};"></div>
+            `;
+
+            container.appendChild(label);
+        });
+    }
+
+    function populateSizeFilters(productData) {
+        const container = document.getElementById("filterSizes");
+        if (!container) return;
+
+        const sizeSet = new Set();
+        productData.forEach(product => {
+            if (product.sizes) {
+                product.sizes.forEach(size => sizeSet.add(size));
+            }
+        });
+
+        const sizes = Array.from(sizeSet);
+
+        const letterOrder = ["XXS", "XS", "S", "M", "L", "XL", "XXL", "XXXL"];
+
+        function sizeRank(size) {
+            if (letterOrder.includes(size)) {
+                return [1, letterOrder.indexOf(size)];
+            }
+            if (!isNaN(size)) {
+                return [2, Number(size)];
+            }
+            if (size.includes("/")) {
+                return [3, size];
+            }
+            return [4, size];
+        }
+
+        sizes.sort((a, b) => {
+            const [ga, va] = sizeRank(a);
+            const [gb, vb] = sizeRank(b);
+
+            if (ga !== gb) return ga - gb;
+
+            if (typeof va === "number" && typeof vb === "number") {
+                return va - vb;
+            }
+            return String(va).localeCompare(String(vb));
+        });
+
+        container.innerHTML = "";
+
+        sizes.forEach(size => {
+            const label = document.createElement("label");
+            label.className = "flex items-center gap-2 cursor-pointer";
+
+            label.innerHTML = `
+                <input type="checkbox"
+                       class="w-4 h-4 filter-checkbox"
+                       data-filter-type="size"
+                       data-filter-value="${size}">
+                <span>${size}</span>
+            `;
+
+            container.appendChild(label);
+        });
+    }
+
+    function populateCategoryFilters(productData) {
+        const container = document.getElementById("filterCategories");
+        if (!container) return;
+
+        const categorySet = new Set();
+        productData.forEach(product => {
+            if (product.category) {
+                categorySet.add(product.category);
+            }
+        });
+
+        const categories = Array.from(categorySet).sort((a, b) =>
+            a.localeCompare(b)
+        );
+
+        container.innerHTML = "";
+
+        categories.forEach(category => {
+            const label = document.createElement("label");
+            label.className = "flex items-center gap-2 cursor-pointer";
+
+            label.innerHTML = `
+                <input type="checkbox"
+                       class="w-4 h-4 filter-checkbox"
+                       data-filter-type="category"
+                       data-filter-value="${category}">
+                <span>${category}</span>`;
+
+            container.appendChild(label);
+        });
+    }
+
+    function populateGenderFilters(productData) {
+        const container = document.getElementById("filterGender");
+        if (!container) return;
+
+        const genderSet = new Set();
+        productData.forEach(product => {
+            if (product.gender) {
+                genderSet.add(product.gender);
+            }
+        });
+
+        const genders = Array.from(genderSet).sort((a, b) =>
+            a.localeCompare(b)
+        );
+
+        container.innerHTML = "";
+
+        genders.forEach(gender => {
+            const label = document.createElement("label");
+            label.className = "flex items-center gap-2 cursor-pointer";
+
+            label.innerHTML = `
+                <input type="checkbox"
+                       class="w-4 h-4 filter-checkbox"
+                       data-filter-type="gender"
+                       data-filter-value="${gender}">
+                <span class="capitalize">${gender}</span>`;
+
+            container.appendChild(label);
+        });
+    }
+
+    // ----- PRODUCT GRID RENDER -----
+    function renderProductGrid(products) {
+        const grid = document.getElementById("productGrid");
+        if (!grid) return;
+    
+        grid.innerHTML = "";
+    
+        products.forEach(product => {
+            const card = document.createElement("div");
+            card.className = "border rounded-lg shadow bg-white p-4 space-y-2 cursor-pointer";
+    
+            // clicking opens product page
+            card.addEventListener("click", () => {
+                openProductView(product);
+            });
+    
+            const img = document.createElement("div");
+            img.className = "w-full h-40 bg-gray-200 flex items-center justify-center text-gray-500";
+            img.textContent = "Image Placeholder";
+    
+            const name = document.createElement("h3");
+            name.className = "font-bold text-lg";
+            name.textContent = product.name;
+    
+            const price = document.createElement("p");
+            price.className = "text-green-700 font-semibold";
+            price.textContent = `$${product.price}`;
+    
+            // add to Cart button
+            const addBtn = document.createElement("button");
+            addBtn.className =
+                "mt-auto bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition";
+            addBtn.textContent = "Add to Cart";
+
+            addBtn.addEventListener("click", () => {
+                let qty = 1;
+
+                addToCart(product, {
+                    quantity: qty,
+                    size: null,
+                    color: null
+                });
+
+            });
+
+            card.appendChild(img);
+            card.appendChild(name);
+            card.appendChild(price);
+            card.appendChild(addBtn);
+    
+            grid.appendChild(card);
+        });
+    }
+
+
+    function updateCartBadge() {
+        cartCountBadge.textContent = cartCount;
+    }
+
+
+    function addToCart(product, { quantity = null, size = null, color = null } = {}) {
+        // store a simple cart line item
+        cartData.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity,
+            size,
+            color
+        });
+
+        cartCount += quantity;
+        updateCartBadge();
+    }
+
+    
+    // ----- FILTER STATE & LOGIC -----
+    const activeFilters = {
+        gender: new Set(),
+        category: new Set(),
+        size: new Set(),
+        color: new Set()
+    };
+
+    function recomputeActiveFilters() {
+        activeFilters.gender.clear();
+        activeFilters.category.clear();
+        activeFilters.size.clear();
+        activeFilters.color.clear();
+
+        document.querySelectorAll(".filter-checkbox:checked").forEach(cb => {
+            const type = cb.dataset.filterType;
+            const value = cb.dataset.filterValue;
+
+            if (!type || !value) return;
+
+            if (type === "gender") activeFilters.gender.add(value);
+            else if (type === "category") activeFilters.category.add(value);
+            else if (type === "size") activeFilters.size.add(value);
+            else if (type === "color") activeFilters.color.add(value);
+        });
+    }
+
+    function filterProducts() {
+        let filtered = [...productData];
+
+        if (activeFilters.gender.size > 0) {
+            filtered = filtered.filter(p => activeFilters.gender.has(p.gender));
+        }
+
+        if (activeFilters.category.size > 0) {
+            filtered = filtered.filter(p => activeFilters.category.has(p.category));
+        }
+
+        if (activeFilters.size.size > 0) {
+            filtered = filtered.filter(p =>
+                p.sizes && p.sizes.some(size => activeFilters.size.has(size))
+            );
+        }
+
+        if (activeFilters.color.size > 0) {
+            filtered = filtered.filter(p =>
+                p.color && p.color.some(c => activeFilters.color.has(c.name))
+            );
+        }
+
+        renderProductGrid(filtered);
+    }
+
+    // ----- CURRENT FILTER CHIPS -----
+    function updateCurrentFilterChips() {
+        const container = document.getElementById("currentFilters");
+        if (!container) return;
+
+        container.innerHTML = "";
+
+        const checked = document.querySelectorAll(".filter-checkbox:checked");
+
+        checked.forEach(input => {
+            const type = input.dataset.filterType;
+            const value = input.dataset.filterValue;
+
+            let label = value;
+            if (value === "womens") label = "Womens";
+            else if (value === "mens") label = "Mens";
+
+            const chip = document.createElement("button");
+            chip.className = "border px-3 py-1 text-sm flex items-center gap-1";
+            chip.dataset.filterType = type;
+            chip.dataset.filterValue = value;
+
+            chip.innerHTML = `
+                <span>${label}</span>
+                <span class="text-xs">✕</span>`;
+
+            chip.addEventListener("click", () => {
+                document.querySelectorAll(".filter-checkbox").forEach(cb => {
+                    if (
+                        cb.dataset.filterType === type &&
+                        cb.dataset.filterValue === value
+                    ) {
+                        cb.checked = false;
+                    }
+                });
+
+                refreshFiltersAndProducts();
+            });
+
+            container.appendChild(chip);
+        });
+    }
+
+    function refreshFiltersAndProducts() {
+        recomputeActiveFilters();
+        updateCurrentFilterChips();
+        filterProducts();
+    }
+
+    // ----- CLEAR ALL BUTTON -----
+    const clearAllBtn = document.getElementById("clearAllFilters");
+    if (clearAllBtn) {
+        clearAllBtn.addEventListener("click", () => {
+            document.querySelectorAll(".filter-checkbox").forEach(cb => {
+                cb.checked = false;
+            });
+            refreshFiltersAndProducts();
+        });
+    }
+
+    let currentProduct = null;
+    let selectedSize = null;
+    let selectedColor = null;
+    
+    function openProductView(product) {
+        currentProduct = product;
+		selectedQuantity = null;
+        selectedSize = null;
+        selectedColor = null;
+    
+        // show single item view
+        showView("product");
+    
+        // main product text
+        document.getElementById("singleProductTitle").textContent = product.name;
+        document.getElementById("singleProductPrice").textContent = `$${product.price}`;
+        document.getElementById("singleProductDescription").textContent = product.description;
+        document.getElementById("singleProductMaterial").textContent = product.material;
+    
+        // breadcrumbs
+        const genderLabel = product.gender === "womens" ? "Women" : "Men";
+        document.getElementById("crumbGender").textContent = genderLabel;
+        document.getElementById("crumbCategory").textContent = product.category;
+        document.getElementById("crumbTitle").textContent = product.name;
+    
+		// quantity
+        const quantityContainer = document.getElementById("singleProductQuantity");
+        quantityContainer.addEventListener("input", () => {
+            selectedQuantity = parseInt(quantityContainer.value);
+        });
+	
+        // sizes
+        const sizeContainer = document.getElementById("singleProductSizes");
+        sizeContainer.innerHTML = "";
+    
+        if (product.sizes && product.sizes.length > 0) {
+            product.sizes.forEach(size => {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.textContent = size;
+                btn.className = "border border-gray-400 px-3 py-1 text-xs";
+    
+                btn.addEventListener("click", () => {
+                    sizeContainer.querySelectorAll("button").forEach(b => {
+                        b.classList.remove("bg-gray-900", "text-white");
+                    });
+                    btn.classList.add("bg-gray-900", "text-white");
+                    selectedSize = size;
+                });
+    
+                sizeContainer.appendChild(btn);
+            });
+        }
+    
+        // colors 
+        const colorContainer = document.getElementById("singleProductColors");
+        colorContainer.innerHTML = "";
+    
+        if (product.color && product.color.length > 0) {
+            product.color.forEach(c => {
+                const box = document.createElement("button");
+                box.type = "button";
+                box.className = "w-8 h-8 border border-gray-400";
+                box.style.backgroundColor = c.hex;
+                box.title = c.name;
+    
+                box.addEventListener("click", () => {
+                    colorContainer.querySelectorAll("button").forEach(b => {
+                        b.classList.remove("ring-2", "ring-gray-900");
+                    });
+                    box.classList.add("ring-2", "ring-gray-900");
+                    selectedColor = c.hex;
+                });
+    
+                colorContainer.appendChild(box);
+            });
+        }
+
+        // add product to cart
+        const addBtn = document.getElementById("btnAddProductToCart");
+        addBtn.onclick = () => {
+            addToCart(currentProduct, {
+                quantity: selectedQuantity,
+                size: selectedSize,
+                color: selectedColor
+            });
+            updateCartBadge();
+        };
+            
+        // related products 
+        const relatedContainer = document.getElementById("relatedProducts");
+        if (relatedContainer) {
+            relatedContainer.innerHTML = "";
+    
+            // prefer same gender & category, excluding current product
+            let pool = productData.filter(p =>
+                p.id !== product.id &&
+                p.gender === product.gender &&
+                p.category === product.category
+            );
+    
+            // but if not enough, fill with same gender (other categories)
+            if (pool.length < 4) {
+                const extras = productData.filter(p =>
+                    p.id !== product.id &&
+                    p.gender === product.gender &&
+                    !pool.includes(p)
+                );
+                pool = pool.concat(extras);
+            }
+    
+            const related = pool.slice(0, 4); // max 4 cards
+    
+            related.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "cursor-pointer";
+    
+                // image placeholder
+                const img = document.createElement("div");
+                img.className = "border border-gray-300 h-40 flex items-center justify-center";
+                img.innerHTML = `<span class="text-gray-400 text-xs">placeholder</span>`;
+    
+                // title, price, plus button
+                const infoRow = document.createElement("div");
+                infoRow.className = "mt-2 flex items-center justify-between";
+    
+                const textWrap = document.createElement("div");
+                const titleEl = document.createElement("p");
+                titleEl.textContent = item.name;
+                const priceEl = document.createElement("span");
+                priceEl.textContent = `$${item.price}`;
+                textWrap.appendChild(titleEl);
+                textWrap.appendChild(priceEl);
+    
+                const plusBtn = document.createElement("button");
+                plusBtn.className = "border border-gray-400 px-2 py-1 text-base leading-none";
+                plusBtn.textContent = "+";
+    
+                infoRow.appendChild(textWrap);
+                infoRow.appendChild(plusBtn);
+    
+                card.addEventListener("click", () => openProductView(item));
+    
+                card.appendChild(img);
+                card.appendChild(infoRow);
+    
+                relatedContainer.appendChild(card);
+            });
+        }
+    }
+
+    async function initProducts() {
+        try {
+            const response = await fetch(
+              "https://gist.githubusercontent.com/rconnolly/d37a491b50203d66d043c26f33dbd798/raw/37b5b68c527ddbe824eaed12073d266d5455432a/clothing-compact.json"
+            );
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+
+            const data = await response.json();
+            productData = data;   
+
+            populateColorFilters(productData);
+            populateSizeFilters(productData);
+            populateCategoryFilters(productData);
+            populateGenderFilters(productData);
+
+            renderProductGrid(productData);
+            refreshFiltersAndProducts();
+
+            loadHomeSections();
+        } catch (err) {
+            console.error("Failed to load product JSON:", err);
+        }
+    }
+
+    // when any filter checkbox changes
+    document.addEventListener("change", (e) => {
+        if (e.target.classList.contains("filter-checkbox")) {
+            refreshFiltersAndProducts();
+        }
+    });
+
+    // load products from JSON
+    initProducts();
+
+});

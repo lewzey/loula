@@ -75,7 +75,7 @@
 
 <section id="view-home" class="spa-view">
 
-  <!-- FULL-WIDTH HERO (your existing code) -->
+  <!-- FULL-WIDTH HERO -->
   <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
     <div 
       class="h-64 relative rounded-none shadow-xl overflow-hidden bg-cover bg-center"
@@ -115,304 +115,159 @@
 
 </section>
 
-    <!-- WOMEN VIEW 
-    <section id="view-women" class="spa-view hidden">
-      <h2 class="text-3xl font-bold mb-4">Women</h2>
+<!-- WOMEN VIEW -->
+<section id="view-women" class="spa-view hidden">
+  <h2 class="text-3xl font-bold mb-4">Women</h2>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-        <button data-browse-category="Tops" class="bg-woodland-dark p-6 rounded-xl hover:bg-woodland-light text-center">
-          Tops
-        </button>
-        <button data-browse-category="Bottoms" class="bg-woodland-dark p-6 rounded-xl hover:bg-woodland-light text-center">
-          Bottoms
-        </button>
-        <button data-browse-category="Dresses" class="bg-woodland-dark p-6 rounded-xl hover:bg-woodland-light text-center">
-          Dresses
-        </button>
-        <button data-browse-category="Outerwear" class="bg-woodland-dark p-6 rounded-xl hover:bg-woodland-light text-center">
-          Outerwear
-        </button>
+  <!-- container -->
+  <div class="max-w-5xl mx-auto border p-8">
+
+    <!-- hero image -->
+    <div class="bg-gray-200 h-48 flex items-center justify-center mb-10">
+      <h1 class="text-xl font-semibold">Women’s Collection</h1>
+    </div>
+
+    <!-- category grid -->
+    <div id="list-women-categories" class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+    </div>
+  </div>
+</section>
+
+<!-- MEN VIEW --> 
+<section id="view-men" class="spa-view hidden">
+  <h2 class="text-3xl font-bold mb-4">Men</h2>
+
+  <!-- container -->
+  <div class="max-w-5xl mx-auto border p-8">
+
+    <!-- hero image -->
+    <div class="bg-gray-200 h-48 flex items-center justify-center mb-10">
+      <h1 class="text-xl font-semibold">Men’s Collection</h1>
+    </div>
+
+    <!-- category grid -->
+    <div id="list-men-categories" class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+    </div>
+  </div>
+</section>
+
+<!-- SINGLE ITEM VIEW -->
+<section id="view-product" class="spa-view hidden">
+  <h2 class="text-3xl font-bold mb-4">Single Item</h2>
+  <div class="max-w-5xl mx-auto border border-gray-300 bg-white p-8 text-gray-800">
+
+    <!-- breadcrumb -->
+    <nav class="text-sm mb-6">
+      <a href="#" class="underline">Home</a>
+      <span> &gt; </span>
+      <a id="crumbGender" class="underline">Gender</a>
+      <span> &gt; </span>
+      <a id="crumbCategory" class="underline">Category</a>
+      <span> &gt; </span>
+      <span id="crumbTitle">Product Title</span>
+    </nav>
+
+    <!-- main content -->
+    <div class="grid md:grid-cols-2 gap-10 mb-10">
+
+      <!-- left: main image & smaller images -->
+      <div class="space-y-6">
+        <div class="bg-gray-200 h-64 flex items-center justify-center">
+          <span class="text-gray-500 text-sm">Main Product image placeholder</span>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-gray-200 h-32 flex items-center justify-center">
+            <span class="text-gray-500 text-xs text-center">
+              Smaller product<br>image placeholder
+            </span>
+          </div>
+          <div class="bg-gray-200 h-32 flex items-center justify-center">
+            <span class="text-gray-500 text-xs text-center">
+              Smaller product<br>image placeholder
+            </span>
+          </div>
+        </div>
       </div>
-    </section>-->
 
-  <!-- WOMEN VIEW -->
-  <section id="view-women" class="spa-view hidden">
-    <h2 class="text-3xl font-bold mb-4">Women</h2>
+      <!-- right: product info -->
+      <div class="space-y-4 text-sm">
 
-    <!-- Container -->
-    <div class="max-w-5xl mx-auto border p-8">
-  
-      <!-- Hero image -->
-      <div class="bg-gray-200 h-48 flex items-center justify-center mb-10">
-        <h1 class="text-xl font-semibold">Hero image + title (women or men)</h1>
-      </div>
-  
-      <!-- Category grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-  
-        <!-- Category card -->
-        <div class="text-center">
-          <div class="border h-40 flex items-center justify-center">
-            <span class="text-gray-400">placeholder</span>
-          </div>
-          <p class="mt-2 font-medium">Category</p>
-        </div>
-  
-        <div class="text-center">
-          <div class="border h-40 flex items-center justify-center">
-            <span class="text-gray-400">placeholder</span>
-          </div>
-          <p class="mt-2 font-medium">Category</p>
-        </div>
-  
-        <div class="text-center">
-          <div class="border h-40 flex items-center justify-center">
-            <span class="text-gray-400">placeholder</span>
-          </div>
-          <p class="mt-2 font-medium">Category</p>
-        </div>
-  
-        <div class="text-center">
-          <div class="border h-40 flex items-center justify-center">
-            <span class="text-gray-400">placeholder</span>
-          </div>
-          <p class="mt-2 font-medium">Category</p>
-        </div>
-  
-        <!-- Row 2 -->
-        <div class="text-center">
-          <div class="border h-40 flex items-center justify-center">
-            <span class="text-gray-400">placeholder</span>
-          </div>
-          <p class="mt-2 font-medium">Category</p>
-        </div>
-  
-        <div class="text-center">
-          <div class="border h-40 flex items-center justify-center">
-            <span class="text-gray-400">placeholder</span>
-          </div>
-          <p class="mt-2 font-medium">Category</p>
-        </div>
-  
-        <div class="text-center">
-          <div class="border h-40 flex items-center justify-center">
-            <span class="text-gray-400">placeholder</span>
-          </div>
-          <p class="mt-2 font-medium">Category</p>
-        </div>
-  
-        <div class="text-center">
-          <div class="border h-40 flex items-center justify-center">
-            <span class="text-gray-400">placeholder</span>
-          </div>
-          <p class="mt-2 font-medium">Category</p>
+        <!-- tite -->
+        <h1 id="singleProductTitle" class="text-xl font-semibold"></h1>
+
+        <!-- price -->
+        <div>
+          <p class="font-semibold">Product Price</p>
+          <p id="singleProductPrice" class="mt-1"></p>
         </div>
 
+        <!-- description -->
+        <div>
+          <p class="font-semibold">Product Description</p>
+          <p id="singleProductDescription" class="mt-1"></p>
+        </div>
+
+        <!-- material -->
+        <div>
+          <p class="font-semibold">Material</p>
+          <p id="singleProductMaterial" class="mt-1"></p>
+        </div>
+
+        <!-- quantity -->
+        <div class="flex items-center gap-3">
+          <p class="font-semibold">Quantity</p>
+          <input
+			id="singleProductQuantity"
+            type="number"
+            min="1"
+            value="1"
+            class="w-16 border border-gray-400 px-2 py-1">
+        </div>
+
+        <!-- sizes (JS fills this) -->
+        <div class="space-y-1">
+          <p class="font-semibold">Size</p>
+          <div id="singleProductSizes" class="flex gap-2"></div>
+        </div>
+
+        <!-- colors (JS fills this) -->
+        <div class="space-y-1">
+          <p class="font-semibold">Color</p>
+          <div id="singleProductColors" class="flex gap-3"></div>
+        </div>
+
+        <!-- add to cart button -->
+        <div class="pt-2">
+          <button id="btnAddProductToCart" class="w-40 border border-gray-500 bg-gray-100 px-4 py-2 font-semibold">
+            + Add to Cart
+          </button>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- MEN VIEW WILL GO HERE --> 
-
-  <!-- SINGLE ITEM VIEW on the mens page for now to see--> 
-  <section id="view-men" class="spa-view hidden">
-    <h2 class="text-3xl font-bold mb-4">Single Item</h2>
-      <div class="max-w-5xl mx-auto border border-gray-300 bg-white p-8 text-gray-800">
     
-        <!-- Breadcrumb -->
-        <nav class="text-sm mb-6">
-          <a href="#" class="underline">Home</a>
-          <span> &gt; </span>
-          <a href="#" class="underline">Gender</a>
-          <span> &gt; </span>
-          <a href="#" class="underline">Category Name</a>
-          <span> &gt; </span>
-          <span>Product Title</span>
-        </nav>
-    
-        <!-- Main content -->
-        <div class="grid md:grid-cols-2 gap-10 mb-10">
-    
-          <!-- Left: main image + smaller images -->
-          <div class="space-y-6">
-            <!-- Main product image -->
-            <div class="bg-gray-200 h-64 flex items-center justify-center">
-              <span class="text-gray-500 text-sm">Main Product image placeholder</span>
-            </div>
-    
-            <!-- Smaller product images -->
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-gray-200 h-32 flex items-center justify-center">
-                <span class="text-gray-500 text-xs text-center">
-                  Smaller product<br>image placeholder
-                </span>
-              </div>
-              <div class="bg-gray-200 h-32 flex items-center justify-center">
-                <span class="text-gray-500 text-xs text-center">
-                  Smaller product<br>image placeholder
-                </span>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Right: product info -->
-          <div class="space-y-4 text-sm">
-            <h1 class="text-xl font-semibold">Product Title</h1>
-    
-            <div>
-              <p class="font-semibold">Product Price</p>
-              <p class="mt-1">$80.00</p>
-            </div>
-    
-            <div>
-              <p class="font-semibold">Product Description</p>
-              <p class="mt-1">
-                Short description of the product goes here. Fabric, fit, style, etc.
-              </p>
-            </div>
-    
-            <div>
-              <p class="font-semibold">Material</p>
-              <p class="mt-1">100% Cotton</p>
-            </div>
-    
-            <!-- Quantity -->
-            <div class="flex items-center gap-3">
-              <p class="font-semibold">Quantity</p>
-              <input
-                type="number"
-                min="1"
-                value="1"
-                class="w-16 border border-gray-400 px-2 py-1"
-              >
-            </div>
-    
-            <!-- Sizes -->
-            <div class="space-y-1">
-              <p class="font-semibold">Size</p>
-              <div class="flex gap-2">
-                <button class="border border-gray-400 px-3 py-1 text-xs">XS</button>
-                <button class="border border-gray-400 px-3 py-1 text-xs">S</button>
-                <button class="border border-gray-400 px-3 py-1 text-xs">M</button>
-              </div>
-            </div>
-    
-            <!-- Colors -->
-            <div class="space-y-1">
-              <p class="font-semibold">Color</p>
-              <div class="flex gap-3">
-                <div class="w-8 h-8 bg-blue-700 border border-gray-400"></div>
-                <div class="w-8 h-8 bg-amber-400 border border-gray-400"></div>
-                <div class="w-8 h-8 bg-gray-900 border border-gray-400"></div>
-              </div>
-            </div>
-    
-            <!-- Add to Cart button -->
-            <div class="pt-2">
-              <button class="w-40 border border-gray-500 bg-gray-100 px-4 py-2 font-semibold">
-                + Add to Cart
-              </button>
-            </div>
-          </div>
-        </div>
-    
-        <!-- Related products -->
+        <!-- related products -->
         <div class="mt-4">
           <h2 class="text-center font-semibold mb-4 text-sm">Related Products</h2>
-    
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
 
-            <!-- Card 1 -->
-            <div>
-              <div class="border border-gray-300 h-40 flex items-center justify-center">
-                <span class="text-gray-400 text-xs">placeholder</span>
-              </div>
-              <div class="mt-2 flex items-center justify-between">
-                <div>
-                  <p>Title</p>
-                  <span>$price</span>
-                </div>
-                <button class="border border-gray-400 px-2 py-1 text-base leading-none">+</button>
-              </div>
-            </div>
-    
-            <!-- Card 2 -->
-            <div>
-              <div class="border border-gray-300 h-40 flex items-center justify-center">
-                <span class="text-gray-400 text-xs">placeholder</span>
-              </div>
-              <div class="mt-2 flex items-center justify-between">
-                <div>
-                  <p>Title</p>
-                  <span>$price</span>
-                </div>
-                <button class="border border-gray-400 px-2 py-1 text-base leading-none">+</button>
-              </div>
-            </div>
-    
-            <!-- Card 3 -->
-            <div>
-              <div class="border border-gray-300 h-40 flex items-center justify-center">
-                <span class="text-gray-400 text-xs">placeholder</span>
-              </div>
-              <div class="mt-2 flex items-center justify-between">
-                <div>
-                  <p>Title</p>
-                  <span>$price</span>
-                </div>
-                <button class="border border-gray-400 px-2 py-1 text-base leading-none">+</button>
-              </div>
-            </div>
-    
-            <!-- Card 4 -->
-            <div>
-              <div class="border border-gray-300 h-40 flex items-center justify-center">
-                <span class="text-gray-400 text-xs">placeholder</span>
-              </div>
-              <div class="mt-2 flex items-center justify-between">
-                <div>
-                  <p>Title</p>
-                  <span>$price</span>
-                </div>
-                <button class="border border-gray-400 px-2 py-1 text-base leading-none">+</button>
-              </div>
-            </div>
-          </div>
+          <!-- JS fill this -->
+          <div id="relatedProducts" class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm"></div>
         </div>
-      </div>     
-  </section>
   
-  <!-- MEN VIEW 
-  <section id="view-men" class="spa-view hidden">
-    <h2 class="text-3xl font-bold mb-4">Men</h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-      <button data-browse-category="Tops" class="bg-woodland-dark p-6 rounded-xl hover:bg-woodland-light text-center">
-        Tops
-      </button>
-      <button data-browse-category="Bottoms" class="bg-woodland-dark p-6 rounded-xl hover:bg-woodland-light text-center">
-        Bottoms
-      </button>
-      <button data-browse-category="Outerwear" class="bg-woodland-dark p-6 rounded-xl hover:bg-woodland-light text-center">
-        Outerwear
-      </button>
-      <button data-browse-category="Sweaters" class="bg-woodland-dark p-6 rounded-xl hover:bg-woodland-light text-center">
-        Sweaters
-      </button>
-    </div>
-  </section>-->
+  </section>
 
   <!-- BROWSE VIEW -->
   <section id="view-browse" class="spa-view hidden">
     <h2 class="text-3xl font-bold mb-6">Browse Products</h2>
     <div class="flex gap-6">
 
-      <!-- SIDEBAR -->
+      <!-- sidebar -->
       <aside class="w-64 bg-forest-dark p-4 rounded-xl">
         <h2 class="font-semibold mb-4">Departments</h2>
         <div class="space-y-6">
 
-      <!-- Gender -->
+      <!-- gender -->
       <details open>
         <summary class="flex items-center justify-between font-medium cursor-pointer">
           <span>Gender</span>
@@ -420,136 +275,56 @@
         </summary>
 
         <div class="mt-2 space-y-1 pl-2">
-
-          <label class="block cursor-pointer">
-            <input type="checkbox" class="hidden peer">
-            <span class="peer-checked:font-bold peer-checked:text-emerald-200">
-              Female
-            </span>
-          </label>
-
-          <label class="block cursor-pointer">
-            <input type="checkbox" class="hidden peer">
-            <span class="peer-checked:font-bold peer-checked:text-emerald-200">
-              Male
-            </span>
-          </label>
-
+          <div id="filterGender" class="space-y-1 pl-2"></div>
         </div>
       </details>
 
-      <!-- Category -->
-      <details open>
-        <summary class="flex items-center justify-between font-medium cursor-pointer">
-          <span>Category</span>
-          <span class="text-xs">▼</span>
-        </summary>
-
-        <div class="mt-2 space-y-1 pl-2">
-
-          <label class="block cursor-pointer">
-            <input type="checkbox" class="hidden peer">
-            <span class="peer-checked:font-bold peer-checked:text-emerald-200">
-              Bottoms
-            </span>
-          </label>
-
-          <label class="block cursor-pointer">
-            <input type="checkbox" class="hidden peer">
-            <span class="peer-checked:font-bold peer-checked:text-emerald-200">
-              Dresses
-            </span>
-          </label>
-
-          <label class="block cursor-pointer">
-            <input type="checkbox" class="hidden peer">
-            <span class="peer-checked:font-bold peer-checked:text-emerald-200">
-              Outerwear
-            </span>
-          </label>
-
-          <label class="block cursor-pointer">
-            <input type="checkbox" class="hidden peer">
-            <span class="peer-checked:font-bold peer-checked:text-emerald-200">
-              Tops
-            </span>
-          </label>
-
-        </div>
-      </details>
-
-        <!-- Size (with checkboxes) -->
+        <!-- category -->
         <details open>
           <summary class="flex items-center justify-between font-medium cursor-pointer">
-            <span>Size</span>
+            <span>Category</span>
             <span class="text-xs">▼</span>
           </summary>
+
           <div class="mt-2 space-y-1 pl-2">
-            <label class="flex items-center gap-2">
-              <input type="checkbox" class="w-4 h-4">
-              <span>Small</span>
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="checkbox" class="w-4 h-4">
-              <span>Medium</span>
-            </label>
+            <div id="filterCategories" class="space-y-1 pl-2"></div>
           </div>
         </details>
 
-        <!-- Colors -->
+        <!-- sizes -->
+        <details open>
+          <summary class="flex items-center justify-between font-medium cursor-pointer">
+            <span>Sizes</span>
+            <span class="text-xs">▼</span>
+          </summary>
+
+          <div class="mt-2 space-y-1 pl-2">
+            <div id="filterSizes" class="space-y-1 pl-2"></div>
+          </div>
+        </details>
+
+        <!-- colors -->
         <details open>
           <summary class="flex items-center justify-between font-medium cursor-pointer">
             <span>Colors</span>
             <span class="text-xs">▼</span>
           </summary>
-
           <div class="mt-2 space-y-1 pl-2">
-
-            <!-- Beige -->
-            <label class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-2">
-                <input type="checkbox" class="w-4 h-4">
-                <span>Beige</span>
-              </div>
-
-              <!-- Beige square -->
-              <div class="w-4 h-4" style="background-color:#F5DEB3;"></div>
-            </label>
-
-            <!-- Black -->
-            <label class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-2">
-                <input type="checkbox" class="w-4 h-4">
-                <span>Black</span>
-              </div>
-
-              <!-- Black square -->
-              <div class="w-4 h-4 bg-black"></div>
-            </label>
-
-            <!-- Blue -->
-            <label class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-2">
-                <input type="checkbox" class="w-4 h-4">
-                <span>Blue</span>
-              </div>
-
-              <!-- Blue square -->
-              <div class="w-4 h-4 bg-blue-800"></div>
-            </label>
-
+          <div id="filterColors" class="space-y-1 pl-2"></div>
           </div>
         </details>
 
       </div>
     </aside>
 
-    <!-- MAIN AREA -->
+    <!-- MAIN BROWSE GRID AREA -->
     <main class="flex-1 bg-gray-50 p-6">
       <div class="bg-white p-6 text-black">
-        <!-- Top controls: Browse / Sort / Results / filters -->
+
+        <!-- top section: browse, sort, results, filters -->
         <div class="mb-6 text-sm">
-          <!-- Row 1: Browse + Sort -->
+
+          <!-- browse & sort -->
           <div class="flex items-center justify-between mb-4">
             <h3 class="font-semibold text-base">Browse</h3>
 
@@ -563,276 +338,37 @@
             </div>
           </div>
 
-          <!-- Row 2: Results + Clear All -->
+          <!-- results & clear all -->
           <div class="flex items-center gap-2 mb-3">
             <span class="font-semibold">Results</span>
-            <button class="border px-3 py-1">X Clear All</button>
+            <button id="clearAllFilters" class="border px-2 py-1">X Clear All</button>
           </div>
 
-          <!-- Row 3: current filter chips -->
-          <div class="flex flex-wrap gap-2">
-            <button class="border px-3 py-1">Female</button>
-            <button class="border px-3 py-1">Dresses</button>
-            <button class="border px-3 py-1">Small</button>
-            <button class="border px-3 py-1">Beige</button>
-            <button class="border px-3 py-1">Blue</button>
-          </div>
-        </div>
+        <!-- current filter chips (filled by JS) -->
+        <div id="currentFilters" class="flex flex-wrap gap-2"></div>
 
-        <!-- Product grid (static placeholders for now; JS can replace these) -->
-        <div id="browseResults" class="grid grid-cols-2 md:grid-cols-3 gap-6 text-sm">
-
-          <!-- Card 1 -->
-          <div>
-            <a href="#" class="block border h-40 flex items-center justify-center">
-              <span class="text-gray-400">placeholder</span>
-            </a>
-            <div class="mt-2 flex items-center justify-between">
-              <div>
-                <a href="#" class="block hover:underline">Title</a>
-                <span>$price</span>
-              </div>
-              <button class="border px-2 py-1 text-base leading-none font-bold">+</button>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div>
-            <a href="#" class="block border h-40 flex items-center justify-center">
-              <span class="text-gray-400">placeholder</span>
-            </a>
-            <div class="mt-2 flex items-center justify-between">
-              <div>
-                <a href="#" class="block hover:underline">Title</a>
-                <span>$price</span>
-              </div>
-              <button class="border px-2 py-1 text-base leading-none font-bold">+</button>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div>
-            <a href="#" class="block border h-40 flex items-center justify-center">
-              <span class="text-gray-400">placeholder</span>
-            </a>
-            <div class="mt-2 flex items-center justify-between">
-              <div>
-                <a href="#" class="block hover:underline">Title</a>
-                <span>$price</span>
-              </div>
-              <button class="border px-2 py-1 text-base leading-none font-bold">+</button>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div>
-            <a href="#" class="block border h-40 flex items-center justify-center">
-              <span class="text-gray-400">placeholder</span>
-            </a>
-            <div class="mt-2 flex items-center justify-between">
-              <div>
-                <a href="#" class="block hover:underline">Title</a>
-                <span>$price</span>
-              </div>
-              <button class="border px-2 py-1 text-base leading-none font-bold">+</button>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div>
-            <a href="#" class="block border h-40 flex items-center justify-center">
-              <span class="text-gray-400">placeholder</span>
-            </a>
-            <div class="mt-2 flex items-center justify-between">
-              <div>
-                <a href="#" class="block hover:underline">Title</a>
-                <span>$price</span>
-              </div>
-              <button class="border px-2 py-1 text-base leading-none font-bold">+</button>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div>
-            <a href="#" class="block border h-40 flex items-center justify-center">
-              <span class="text-gray-400">placeholder</span>
-            </a>
-            <div class="mt-2 flex items-center justify-between">
-              <div>
-                <a href="#" class="block hover:underline">Title</a>
-                <span>$price</span>
-              </div>
-              <button class="border px-2 py-1 text-base leading-none font-bold">+</button>
-            </div>
-          </div>
-        </div>
+        <!-- product grid (just placeholders for now - JS will replace them) -->
+        <div
+        id="productGrid"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      
       </div>
     </main>
 
   </div>
 </section>
 
-  <!-- SINGLE PRODUCT VIEW 
-  <section id="view-product" class="spa-view hidden">
-    <h2 class="text-3xl font-bold mb-4" id="productTitle"></h2>
-
-    <div class="flex flex-col md:flex-row gap-6">
-      <div class="bg-woodland-dark w-full md:w-1/2 h-64 rounded-xl"></div>
-
-      <div class="md:w-1/2 space-y-4">
-        <p id="productDescription"></p>
-        <p class="text-xl font-bold" id="productPrice"></p>
-
-        <button id="addToCartBtn"
-          class="bg-woodland-light text-black px-4 py-2 rounded-xl font-semibold hover:bg-forest-light"
-        >
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  </section>-->
-
-  <!-- CART VIEW 
-  <section id="view-cart" class="spa-view hidden">
-    <h2 class="text-3xl font-bold mb-4">Shopping Cart</h2>
-    <p class="text-woodland-light">Your cart items will appear here.</p>
-    <div id="cartItems"></div>
-  </section>-->
-
   <!-- SHOPPING CART VIEW -->
   <section id="view-cart" class="spa-view hidden p-8">
     <h2 class="text-3xl font-bold mb-4">Shopping Cart</h2>
     <div class="max-w-6xl mx-auto border border-gray-300 p-8 bg-white text-gray-800">
   
-      <!-- Title -->
+      <!-- title -->
       <h2 class="text-center text-xl font-semibold mb-8">Shopping Cart</h2>
+
+      <!-- fill this with the full cart layout -->
+      <div id="cartContent"></div>
   
-      <!-- COLUMN HEADER -->
-      <div class="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr] text-sm font-semibold pb-3 border-b border-gray-300">
-        <div>Items</div>
-        <div class="text-center">Color</div>
-        <div class="text-center">Size</div>
-        <div class="text-center">Price</div>
-        <div class="text-center">Quantity</div>
-        <div class="text-center">Subtotal</div>
-      </div>
-  
-      <!-- ITEM ROW 1 -->
-      <div class="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr] text-sm items-center py-6 border-b border-gray-200">
-  
-        <!-- Items column -->
-        <div class="flex items-center gap-4">
-          <button class="border border-gray-400 px-2 py-1 leading-none">-</button>
-  
-          <div class="border border-gray-400 w-20 h-24 flex items-center justify-center text-gray-400 text-xs">
-            placeholder
-          </div>
-  
-          <span>Product Title</span>
-        </div>
-  
-        <!-- Color -->
-        <div class="flex justify-center">
-          <div class="w-5 h-5 bg-blue-700"></div>
-        </div>
-  
-        <!-- Size -->
-        <div class="flex justify-center">
-          <div class="border border-gray-400 px-3 py-1 text-xs">XS</div>
-        </div>
-  
-        <!-- Price -->
-        <div class="text-center">$80.00</div>
-  
-        <!-- Quantity -->
-        <div class="text-center">2</div>
-  
-        <!-- Subtotal -->
-        <div class="text-center">$160.00</div>
-      </div>
-  
-      <!-- ITEM ROW 2 -->
-      <div class="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr] text-sm items-center py-6 border-b border-gray-200">
-  
-        <div class="flex items-center gap-4">
-          <button class="border border-gray-400 px-2 py-1 leading-none">-</button>
-  
-          <div class="border border-gray-400 w-20 h-24 flex items-center justify-center text-gray-400 text-xs">
-            placeholder
-          </div>
-  
-          <span>Product Title</span>
-        </div>
-  
-        <div class="flex justify-center">
-          <div class="w-5 h-5 bg-blue-900"></div>
-        </div>
-  
-        <div class="flex justify-center">
-          <div class="border border-gray-400 px-3 py-1 text-xs">S</div>
-        </div>
-  
-        <div class="text-center">$40.00</div>
-        <div class="text-center">1</div>
-        <div class="text-center">$40.00</div>
-      </div>
-  
-      <!-- Bottom Section -->
-      <div class="mt-10 flex flex-wrap gap-12 items-start">
-  
-        <!-- Shipping -->
-        <div class="w-56">
-          <h3 class="font-semibold mb-3">Shipping</h3>
-  
-          <div class="mb-4">
-            <label class="block text-xs mb-1">Method</label>
-            <select class="w-full border border-gray-400 px-3 py-2 text-sm bg-white">
-              <option>Standard</option>
-              <option>Express</option>
-              <option>Priority</option>
-            </select>
-          </div>
-  
-          <div>
-            <label class="block text-xs mb-1">Destination</label>
-            <select class="w-full border border-gray-400 px-3 py-2 text-sm bg-white">
-              <option>Canada</option>
-              <option>United States</option>
-              <option>International</option>
-            </select>
-          </div>
-        </div>
-  
-        <!-- Summary -->
-        <div class="flex-1 max-w-sm">
-          <h3 class="font-semibold mb-3">Summary</h3>
-  
-          <div class="border border-gray-400 p-4 space-y-2">
-            <div class="flex justify-between">
-              <span>Merchandise</span><span>$400.00</span>
-            </div>
-  
-            <div class="flex justify-between">
-              <span>Shipping</span><span>$40.00</span>
-            </div>
-  
-            <div class="flex justify-between">
-              <span>Tax</span><span>$20.00</span>
-            </div>
-  
-            <div class="flex justify-between font-semibold pt-2 border-t border-gray-300 mt-2">
-              <span>Total</span><span>$460.00</span>
-            </div>
-          </div>
-  
-          <!-- Checkout Button -->
-          <div class="mt-4 flex justify-center">
-            <button class="border border-gray-500 px-8 py-2 font-semibold bg-gray-100">
-              Checkout
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
   
